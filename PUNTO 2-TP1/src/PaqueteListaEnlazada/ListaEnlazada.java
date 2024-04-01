@@ -207,6 +207,32 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
         }
     }
     
+    //MÉTODO borrarConValor(int buscado): elimina todos los nodos que tengan el valor buscado
+    public void borrarConValor(int buscado)
+    { 
+        if(!this.esVacia())
+        {
+            while(this.primero!=null && this.primero.informacion==buscado) //para borrar si se encuentra en los primeros lugares
+            {
+                this.primero=this.primero.siguiente;
+            }
+
+            Nodo NodoAuxiliar=this.primero;
+
+            while(NodoAuxiliar!=null && NodoAuxiliar.siguiente!=null)
+            {
+                if(NodoAuxiliar.siguiente.informacion==buscado)
+                {
+                    NodoAuxiliar.siguiente=NodoAuxiliar.siguiente.siguiente;
+                }
+                else
+                {
+                    NodoAuxiliar=NodoAuxiliar.siguiente;
+                }
+            }
+        }
+    }
+    
     
             
            

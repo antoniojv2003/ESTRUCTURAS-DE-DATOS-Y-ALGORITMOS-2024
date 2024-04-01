@@ -56,6 +56,17 @@ public class Principal { //clase con el método main
         System.out.println(listaEnlazada1.pertenece(1)); //vemos si pertenece el 1
         System.out.println(listaEnlazada1.pertenece(4)); //vemos si pertenece el 4
         System.out.println(listaEnlazada1.pertenece(2)); //vemos si pertenece el 2
+        
+        listaEnlazada1.InsertarAlFinal(3);
+        listaEnlazada1.InsertarAlFinal(3);
+        listaEnlazada1.InsertarAlFinal(11);
+        listaEnlazada1.InsertarAlFinal(3);
+        
+        listaEnlazada1.mostrar();
+        listaEnlazada1.borrarConValor(3);
+        listaEnlazada1.mostrar();
+        
+        
 
 
         
