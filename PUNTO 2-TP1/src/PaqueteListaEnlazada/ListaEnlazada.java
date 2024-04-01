@@ -309,7 +309,7 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
         
         //insertamos el nuevo nodo entre el actual y el siguiente
         NodoAInsertar.siguiente=NodoAuxiliar.siguiente;
-        NodoAuxiliar.siguiente=NodoAInsertar;
+        NodoAuxiliar.siguiente=NodoAInsertar; //FUNCIONA PERO SE PUEDE MEJORAR
         
         
     }
