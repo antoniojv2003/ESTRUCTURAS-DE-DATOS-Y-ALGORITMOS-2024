@@ -63,6 +63,25 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
         return(this.primero==null); //comprueba si el primer elemento apunta a null
     }
     
+    //MÉTODO InsertarAlInicio(int x): inserta un nodo al comienzo de la lista
+    public void InsertarAlInicio(int x)
+    {
+        Nodo NodoAInsertar=new Nodo(x); //creamos el nodo que tendra esa informacion
+        if(this.esVacia())
+        { 
+          this.primero=NodoAInsertar;  //si la lista está vacia hacemos que el nodo 
+                                       //primero apunte al nodo a insertar
+        }
+        else
+        {
+            NodoAInsertar.siguiente=this.primero; //hacemos que el nodo a insertar apunte
+                                                  //apunte al que estaba primero
+            this.primero=NodoAInsertar;//ponemos como primero este nodo que creamos
+        }
+    }
+    
+    
+    
     
             
            
