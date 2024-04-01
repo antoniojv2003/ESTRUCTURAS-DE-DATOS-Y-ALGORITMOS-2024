@@ -115,7 +115,8 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
             System.out.println("La lista esta vacia!!!");
         }
         else
-        {
+        {  
+            System.out.println("***CONTENIDO DE LA LISTA***");
             while(NodoAuxiliar!=null)
             {
                 System.out.println(NodoAuxiliar.informacion); //mostramos el contenido del nodo
