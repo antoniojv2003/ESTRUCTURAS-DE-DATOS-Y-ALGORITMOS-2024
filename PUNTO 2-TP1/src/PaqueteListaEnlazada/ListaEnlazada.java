@@ -282,6 +282,37 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
         
     }
     
+    //MÉTODO insertarEnPosicion: inserta un nodo en la posicion "posicion" con valor "valor"
+    public void insertarEnPosicion(int valor, int posicion)
+    {
+        Nodo NodoAInsertar=new Nodo(valor); //creamos el nodo que queremos insertar
+        if(this.esVacia()) //vemos si es vacía
+        {
+            NodoAInsertar.siguiente=null; //creo que es redundante
+            this.primero=NodoAInsertar; //hacemos que el primero o cabecera apunte a NodoAInsertar
+            return;
+        }
+        
+        int contador=1; //con esto iremos contando las iteraciones y avanzando en las posiciones
+        if(posicion==1) //vemos si queremos insertar en la posicion 1
+        {
+         NodoAInsertar.siguiente=this.primero.siguiente;
+         this.primero=NodoAInsertar;
+         return;
+        }
+        Nodo NodoAuxiliar=this.primero;
+        while(contador<posicion-1 && NodoAuxiliar!=null) //asi avanzamos hasta la posicion anterior a la deseada
+        {
+            NodoAuxiliar=NodoAuxiliar.siguiente;
+            contador++;
+        }
+        
+        //insertamos el nuevo nodo entre el actual y el siguiente
+        NodoAInsertar.siguiente=NodoAuxiliar.siguiente;
+        NodoAuxiliar.siguiente=NodoAInsertar;
+        
+        
+    }
             
            
     

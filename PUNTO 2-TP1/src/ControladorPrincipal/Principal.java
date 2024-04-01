@@ -72,6 +72,10 @@ public class Principal { //clase con el método main
         System.out.println("Lista luego de modificar el elemento en la posicion 2");
         listaEnlazada1.mostrar();
         
+        listaEnlazada1.insertarEnPosicion(534, 4);
+        System.out.println("Lista luego de insertar el valor 534 en la posicion 3");
+        listaEnlazada1.mostrar();
+        
         
 
 
