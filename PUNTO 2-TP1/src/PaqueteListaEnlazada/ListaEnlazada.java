@@ -183,6 +183,31 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
         }
     }
     
+    //MÉTODO pertenece(int buscado): determina si un elemento pertenece a la lista
+    public boolean pertenece(int buscado)
+    {
+        Nodo NodoAuxiliar=this.primero; //nodo auxiliar para recorrer la lista
+        
+        if(this.esVacia())
+        {
+            return false;
+        }
+        else
+        {
+            while(NodoAuxiliar!=null)
+            {
+                if(NodoAuxiliar.informacion==buscado)
+                {
+                    return true; //si coincide entonces retorna true
+                }
+                
+                NodoAuxiliar=NodoAuxiliar.siguiente; //pasamos a apuntar al siguiente nodo
+            }
+            return false; //si no encuentra un elemento que tenga el mismo valor entonces retorna true
+        }
+    }
+    
+    
             
            
     
