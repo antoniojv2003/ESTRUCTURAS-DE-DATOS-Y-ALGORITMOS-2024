@@ -40,7 +40,7 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
     
     //CONSTRUCTOR PRIVADO
 
-    public ListaEnlazada() {
+    private ListaEnlazada() {
         this.primero = null; //incializamos en null siempre
     }
     
@@ -148,6 +148,19 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
        }
        
        return contadorDeNodos; //retornamos la cantidad de nodos
+    }
+    
+    //MÉTODO borrarPrimero(): elimina el primer nodo de la lista
+    public void borrarPrimero()
+    {
+        if(this.esVacia())
+        {
+            System.out.println("La lista no posee elementos para borrar");
+        }
+        else
+        {
+            this.primero=this.primero.siguiente; //deja de apuntar al que estaba apuntando antes
+        }                                       //sino que apunta al que le sigue  
     }
     
     
