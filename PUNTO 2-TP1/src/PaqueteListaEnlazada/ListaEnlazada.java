@@ -261,6 +261,27 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
         
     }
     
+    //MÉTODO modificarValorEnPosicion: modificar el contenido del nodo de la posicion "posicion"
+    public void modificarValorEnPosicion(int valor, int posicion)
+    {
+        Nodo NodoAuxiliar=this.primero; //con este nodo iremos recorriendo la lista
+        int contador=1; //iremos contando la iteracion de cada nodo de la lista
+        if(!this.esVacia())
+        {
+            while(contador<=this.cantidad())
+            {
+                if(posicion==contador)
+                {     
+                    NodoAuxiliar.informacion=valor; //si coincide la posicion buscada, reemplazamos por el valor que mandamos
+                }
+                contador++;
+                NodoAuxiliar=NodoAuxiliar.siguiente; //paso al siguiente nodo
+                
+            }
+        }
+        
+    }
+    
             
            
     

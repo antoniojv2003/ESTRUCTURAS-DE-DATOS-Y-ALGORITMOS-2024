@@ -68,6 +68,10 @@ public class Principal { //clase con el método main
         
         System.out.println("El valor en la posicion tal es "+listaEnlazada1.dameValorEnPosicion(4));
         
+        listaEnlazada1.modificarValorEnPosicion(5, 4);
+        System.out.println("Lista luego de modificar el elemento en la posicion 2");
+        listaEnlazada1.mostrar();
+        
         
 
 
