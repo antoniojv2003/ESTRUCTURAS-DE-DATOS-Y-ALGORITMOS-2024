@@ -14,6 +14,8 @@ public class Principal { //clase con el método main
     public static void main(String[] args) {
         //pruebas para la clase lista
         ListaEnlazada listaEnlazada1=new ListaEnlazada();
+        System.out.println("Cantidad de elementos en la lista:");
+        System.out.println(listaEnlazada1.cantidad());
         listaEnlazada1.InsertarAlInicio(2);
         System.out.println(listaEnlazada1.esVacia()); //funciona
         
@@ -22,12 +24,19 @@ public class Principal { //clase con el método main
         listaEnlazada1.InsertarAlInicio(4);
         System.out.println("El listado de elementos nos queda asi despues de agregar el 4 al inicio");
         listaEnlazada1.mostrar();
+        System.out.println("Cantidad de elementos en la lista:");
+        System.out.println(listaEnlazada1.cantidad());
         listaEnlazada1.InsertarAlInicio(9);
         System.out.println("El listado de elementos nos queda asi despues de agregar el 9 al inicio");
-        listaEnlazada1.mostrar();        
+        listaEnlazada1.mostrar();
+        System.out.println("Cantidad de elementos en la lista:");
+        System.out.println(listaEnlazada1.cantidad());        
         listaEnlazada1.InsertarAlFinal(1);
         System.out.println("El listado de elementos nos queda asi despues de agregar el 1 al final");
-        listaEnlazada1.mostrar();        
+        listaEnlazada1.mostrar();       
+        
+        System.out.println("Cantidad de elementos en la lista:");
+        System.out.println(listaEnlazada1.cantidad());
         
     }
     

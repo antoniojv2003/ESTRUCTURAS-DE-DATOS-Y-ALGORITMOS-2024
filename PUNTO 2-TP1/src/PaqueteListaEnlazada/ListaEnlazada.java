@@ -107,7 +107,6 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
     //MÉTODO MOSTRAR(): recorre los nodos de la lista y muestra su contenido por pantalla
     public void mostrar()
     {
-//        int contador=1; 
         Nodo NodoAuxiliar=this.primero; //nodo que ira recorriendo la lista
         
         if(this.esVacia())
@@ -127,6 +126,30 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
         
         
     }
+    
+    //MÉTODO cantidad():devuelve la cantidad de nodos de una lista
+    public int cantidad()
+    {
+       int contadorDeNodos=0; //contaremos los nodos y retornaremos los mismos
+       Nodo NodoAuxiliar=this.primero; //usaremos un nodo auxiliar para recorrer la lista
+       
+       if(this.esVacia())
+       {
+           return 0;
+       }
+       else
+       {
+           while(NodoAuxiliar!=null)
+           {
+               contadorDeNodos++; //incrementamos el contador
+               NodoAuxiliar=NodoAuxiliar.siguiente; //apuntamos al siguiente nodo
+               
+           }
+       }
+       
+       return contadorDeNodos; //retornamos la cantidad de nodos
+    }
+    
     
             
            
