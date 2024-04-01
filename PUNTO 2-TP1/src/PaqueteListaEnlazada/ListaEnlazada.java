@@ -10,7 +10,7 @@ package PaqueteListaEnlazada;
  */
 public class ListaEnlazada { //mediante esta clase implementaremos la lista enlazada
     
-    public class Nodo{
+    public class Nodo{ //clase Nodo
         private Nodo siguiente; //variables de instancia de esta clase como privadas para cumplir con el encapsulamiento (usar metodos get and set para acceder a ellas)
         private int informacion;
         
@@ -37,6 +37,13 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
     
     //variables de instancia de la clase ListaEnlazada
     private Nodo primero; //definimos el primer nodo de la lista (será nuestra cabecera) 
+    
+    //CONSTRUCTOR PRIVADO
+
+    public ListaEnlazada() {
+        this.primero = null; //incializamos en null siempre
+    }
+    
 
     //DEFINICION DE LOS MÉTODOS PARA LA CLASE ListaEnlazada 
     
