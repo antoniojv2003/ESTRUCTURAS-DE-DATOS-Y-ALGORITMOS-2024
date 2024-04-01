@@ -81,6 +81,28 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
     }
     
     
+    //MÉTODO InsertarAlFinal(): inserta un nodo al final de la lista
+    public void InsertarAlFinal(int x)
+    {
+        Nodo NodoAInsertar=new Nodo(x); //creamos le nodo a insertar con esa información
+        if(this.esVacia())
+        {
+            this.primero=NodoAInsertar; //si la lista está vacia ese nodo es el primero
+        }
+        else
+        {
+            Nodo NodoAuxiliar=this.primero; //este nodo nos servirá para que simule ser el primero e ir recorriendo la lista
+            
+            while(NodoAuxiliar.siguiente!=null)
+            {
+             NodoAuxiliar=NodoAuxiliar.siguiente; //mientras el nodo al que apunte un nodo no sea null (es decir no llegamos al final de la lista) 
+                                                           //pasaremos al siguiente
+            }
+            NodoAuxiliar.siguiente=NodoAInsertar; //una vez que llegamos al final de la lista hacemos que el último nodo apunte al que queremos insertar
+
+        }
+        
+    }
     
     
             
