@@ -10,7 +10,7 @@ package ControladorPrincipal;
  */
 public class Principal { //clase con el método main
     public static void main(String[] args) {
-        
+    //pruebas para la clase lista    
         
     }
     

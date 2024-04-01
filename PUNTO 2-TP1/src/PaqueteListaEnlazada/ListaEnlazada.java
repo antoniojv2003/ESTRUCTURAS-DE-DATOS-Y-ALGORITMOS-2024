@@ -104,6 +104,28 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
         
     }
     
+    //MÉTODO MOSTRAR(): recorre los nodos de la lista y muestra su contenido por pantalla
+    public void mostrar()
+    {
+//        int contador=1; 
+        Nodo NodoAuxiliar=this.primero; //nodo que ira recorriendo la lista
+        
+        if(this.esVacia())
+        {
+            System.out.println("La lista esta vacia!!!");
+        }
+        else
+        {
+            while(NodoAuxiliar!=null)
+            {
+                System.out.println(NodoAuxiliar.informacion); //mostramos el contenido del nodo
+                NodoAuxiliar=NodoAuxiliar.siguiente; //apuntamos al siguiente nodo
+            }
+            
+        }
+        
+        
+    }
     
             
            
