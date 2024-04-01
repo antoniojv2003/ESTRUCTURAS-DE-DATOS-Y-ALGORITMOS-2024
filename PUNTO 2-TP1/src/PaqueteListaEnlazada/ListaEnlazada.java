@@ -296,7 +296,7 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
         int contador=1; //con esto iremos contando las iteraciones y avanzando en las posiciones
         if(posicion==1) //vemos si queremos insertar en la posicion 1
         {
-         NodoAInsertar.siguiente=this.primero.siguiente;
+         NodoAInsertar.siguiente=this.primero;
          this.primero=NodoAInsertar;
          return;
         }
