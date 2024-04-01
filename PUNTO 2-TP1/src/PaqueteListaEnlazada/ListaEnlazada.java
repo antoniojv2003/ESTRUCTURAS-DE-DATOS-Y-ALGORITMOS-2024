@@ -163,6 +163,25 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
         }                                       //sino que apunta al que le sigue  
     }
     
+    //MÉTODO borrarUltimo: elimina el último nodo de la lista
+    public void borrarUltimo()
+    {
+        Nodo NodoAuxiliar=this.primero; //usaremos un nodo auxiliar para recorrer nuestra lista
+        
+        if(this.esVacia())
+        {
+            System.out.println("La lista no posee elementos para borrar");
+        }
+        else
+        {
+            while(NodoAuxiliar.siguiente.siguiente!=null)
+            {
+                NodoAuxiliar=NodoAuxiliar.siguiente;
+                
+            }
+            NodoAuxiliar.siguiente=null;
+        }
+    }
     
             
            

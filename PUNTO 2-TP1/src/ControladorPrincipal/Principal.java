@@ -48,6 +48,10 @@ public class Principal { //clase con el método main
         listaEnlazada1.borrarPrimero();
         listaEnlazada1.mostrar();
         
+        System.out.println("Asi queda la lista si borramos el ultimo nodo");
+        listaEnlazada1.borrarUltimo();
+        listaEnlazada1.mostrar();
+        
     }
     
 }
