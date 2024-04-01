@@ -66,6 +66,8 @@ public class Principal { //clase con el método main
         listaEnlazada1.borrarConValor(3);
         listaEnlazada1.mostrar();
         
+        System.out.println("El valor en la posicion tal es "+listaEnlazada1.dameValorEnPosicion(4));
+        
         
 
 

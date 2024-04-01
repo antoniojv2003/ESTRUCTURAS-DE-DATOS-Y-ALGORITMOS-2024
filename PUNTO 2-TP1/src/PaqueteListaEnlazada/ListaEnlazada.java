@@ -233,6 +233,33 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
         }
     }
     
+    //MÉTODO dameValorEnPosicion(int posicion):Devuelve el contenido del nodo en la posicion "posicion"
+    //NOTA: para este método supondré que la posicion en las listas comienzan en 1
+    public int dameValorEnPosicion(int posicion)
+    {
+        int valorBuscado=0; //aqui guardaremos el valor de esa posicion de nodo
+        Nodo NodoAuxiliar=this.primero; //con este nodo iremos recorriendo la lista
+        int contador=1; //iremos contando la iteracion de cada nodo de la lista
+        if(!this.esVacia())
+        {
+            while(contador<=this.cantidad())
+            {
+                if(posicion==contador)
+                {     
+                    valorBuscado=NodoAuxiliar.informacion; //devuelve el valor del nodo en esa posicion  
+                }
+                contador++;
+                NodoAuxiliar=NodoAuxiliar.siguiente; //paso al siguiente nodo
+                
+            }
+        }
+        if(valorBuscado==0)
+        {
+            System.out.println("No se encontro un nodo en esa posicion");
+        }
+        return valorBuscado;
+        
+    }
     
             
            
