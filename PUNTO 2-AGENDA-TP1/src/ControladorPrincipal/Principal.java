@@ -29,18 +29,23 @@ public class Principal { //clase donde estará el método main
         System.out.println(Agenda1.buscar("camila"));
         System.out.println(Agenda1.buscar("Juan"));
         System.out.println(Agenda1.buscar("Ricardo"));
-        
-        
+                
         Agenda1.listar();
+        System.out.println("Cantidad de contactos en la agenda: "+Agenda1.cantidad());
         
-        Agenda1.borrar("81654");
-        Agenda1.borrar("75421");
-        Agenda1.borrar("3445");
+//        Agenda1.borrar("81654");
+//        Agenda1.borrar("75421");
+//        Agenda1.borrar("3445");
+//        
+//        System.out.println("AGENDA DESPUES DE ELIMINAR A SERGIO Y A JUAN");
+// 
+//        
+//        Agenda1.listar();
+//        
+//        System.out.println("Cantidad de contactos en la agenda: "+Agenda1.cantidad());  
+        System.out.println("\nCONTACTO DE LA POSICION 2:");
+        System.out.println(Agenda1.enPosicion(2));
         
-        System.out.println("AGENDA DESPUES DE ELIMINAR A SERGIO Y A JUAN");
- 
-        
-        Agenda1.listar();
         
         
         

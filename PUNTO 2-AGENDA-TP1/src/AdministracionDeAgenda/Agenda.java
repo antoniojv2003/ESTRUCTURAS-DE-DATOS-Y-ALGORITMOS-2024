@@ -167,6 +167,47 @@ public class Agenda { //la agenda será nuestra lista enlazada
             return;
         }
     }
+    
+    //MÉTODO cantidad(): devuelve la cantidad de contactos de la agenda
+    public int cantidad()
+    {
+        Nodo NodoAuxiliar=this.primero; //recorremos la lista mediante este nodo auxiliar
+        int contador=0; //arrancaremos a contar desde 1
+        
+        while(NodoAuxiliar!=null)
+        {
+            contador++;
+            NodoAuxiliar=NodoAuxiliar.siguiente;
+        }
+        
+        return contador;
+    }
+    
+    
+    //MÉTODO enPosicion(int Posicion): devuelve el contacto en la posicion "posicion"
+    public Contacto enPosicion(int posicion)
+    {
+        int contador=1; //con este contador trataremos de ubicar la posicion mandada por parámetro
+        Nodo NodoAuxiliar=this.primero; //con este nodo auxiliar iremos recorriendo la lista
+        Contacto contactoARetornar; //será la variable a retornar 
+        
+        while(NodoAuxiliar!=null)
+        {
+            if(contador==posicion)
+            {
+                contactoARetornar=NodoAuxiliar.contacto;
+                return contactoARetornar;
+                
+            }
+            NodoAuxiliar=NodoAuxiliar.siguiente; //pasamos al siguiente nodo
+            contador ++; //pasamos al siguiente contacto
+        }
+        
+        return null; //retorna null si no se encuentra el contacto de esa posicion
+              
+        
+    }
+    
      
     
     
