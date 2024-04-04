@@ -4,6 +4,8 @@
  */
 package AdministracionDeAgenda;
 
+import java.util.Objects;
+
 /**
  *
  * @author Usuario
@@ -48,6 +50,39 @@ public class Contacto {
     public String toString() {
         return "{" + "nombre=" + nombre + ", telefono=" + telefono + ", email=" + email + '}';
     }
+
+    //REDEFINICION DE EQUALS Y HASHCODE
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 31 * hash + Objects.hashCode(this.nombre);
+        hash = 31 * hash + Objects.hashCode(this.telefono);
+        hash = 31 * hash + Objects.hashCode(this.email);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Contacto other = (Contacto) obj;
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        if (!Objects.equals(this.telefono, other.telefono)) {
+            return false;
+        }
+        return Objects.equals(this.email, other.email);
+    }
+    
+    
     
     
     
