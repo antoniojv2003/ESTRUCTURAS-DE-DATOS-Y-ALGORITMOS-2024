@@ -14,7 +14,7 @@ public class ControladorPrincipal {
         
         int[] vector={1,3,5,6};
         
-        System.out.println(metodosRecurs.buscarElemento(vector,4,0));
+        System.out.println(metodosRecurs.buscarElemento(vector,5,0));
     }
     
 }
