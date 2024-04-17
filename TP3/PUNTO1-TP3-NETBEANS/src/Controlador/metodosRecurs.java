@@ -9,19 +9,21 @@ package Controlador;
  * @author Usuario
  */
 public class metodosRecurs {
-    public static int buscarElemento(int[] arreglo, int elemento, int indice) {
+    
+    //PUNTO 1
+    public static int buscarElemento(int[] arreglo, int elemento, int Primerindice) {
         // Caso base: si el índice es igual al tamaño del arreglo, significa que no se encontró el elemento
-        if (indice == arreglo.length) {
+        if (Primerindice == arreglo.length) {
             return -1;
         }
 
         // Si el elemento en la posición actual es igual al elemento buscado, retornamos el índice actual
-        if (arreglo[indice] == elemento) {
-            return indice;
+        if (arreglo[Primerindice] == elemento) {
+            return Primerindice;
         }
 
         // Llamada recursiva para buscar en el resto del arreglo
-        return buscarElemento(arreglo, elemento, indice + 1);
+        return buscarElemento(arreglo, elemento, Primerindice + 1);
     }
     
      
