@@ -21,22 +21,26 @@ public class ControladorPrincipal {
 
         //PRUEBAS PARA EL PUNTO 2
         
-        ListaEnlazada3 lista1=ListaEnlazada3.crearLista(); //creo la lista
-        System.out.println(lista1.esVacia());
-        lista1.InsertarAlFinal(3);
-        lista1.InsertarAlFinal(5);
-        lista1.InsertarAlFinal(10);
-        lista1.InsertarAlFinal(0);
+//        ListaEnlazada3 lista1=ListaEnlazada3.crearLista(); //creo la lista
 //        System.out.println(lista1.esVacia());
+//        lista1.InsertarAlFinal(3);
+//        lista1.InsertarAlFinal(5);
+//        lista1.InsertarAlFinal(10);
+//        lista1.InsertarAlFinal(0);
+////        System.out.println(lista1.esVacia());
+////        
+////        System.out.println("ELEMENTOS DE LA LISTA");
+////        ListaEnlazada3.mostrar(lista1); //COMENTO ESTA PARTE PARA PROBAR EL OTRO METODO POR SEPARADO SINO ME VACIA LA LISTA
 //        
-//        System.out.println("ELEMENTOS DE LA LISTA");
-//        ListaEnlazada3.mostrar(lista1); //COMENTO ESTA PARTE PARA PROBAR EL OTRO METODO POR SEPARADO SINO ME VACIA LA LISTA
+//        //PRUEBA PARA EL PUNTO 3 
+//        System.out.println("SUMA USANDO LA FUNCION SUMA ENTEROS");
+//        
+//        System.out.println(lista1.esVacia());
+//        System.out.println(ListaEnlazada3.sumaEnteros(lista1, 3));
+
+        //PRUEBA PARA EL PUNTO 6
         
-        //PRUEBA PARA EL PUNTO 3 
-        System.out.println("SUMA USANDO LA FUNCION SUMA ENTEROS");
-        
-        System.out.println(lista1.esVacia());
-        System.out.println(ListaEnlazada3.sumaEnteros(lista1, 3));
+        System.out.println(metodosRecurs.digitoAusente(124, 4));
         
         
         

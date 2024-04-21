@@ -26,6 +26,26 @@ public class metodosRecurs {
         return buscarElemento(arreglo, elemento, Primerindice + 1);
     }
     
+    //PUNTO 6
+    
+    public static boolean digitoAusente(int num,int D) //hago estático al método pues necesito aplicarlo para cualquier num entero y no para objetos de esta clase
+    {
+        if(num==0)
+            return (!(D==num));
+        else
+            if((num%10)==D)
+            {
+                return false;
+            }
+            else
+            {
+                return digitoAusente(num/10,D);
+            }            
+                    
+    }
+    
+    
+    
      
     
 }
