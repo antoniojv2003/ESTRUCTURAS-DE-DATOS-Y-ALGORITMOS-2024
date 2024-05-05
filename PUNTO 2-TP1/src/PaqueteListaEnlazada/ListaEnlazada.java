@@ -174,12 +174,12 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
         }
         else
         {
-            while(NodoAuxiliar.siguiente.siguiente!=null)
+            while(NodoAuxiliar.siguiente.siguiente!=null) //nos movemos hasta llegar al penúltimo 
             {
                 NodoAuxiliar=NodoAuxiliar.siguiente;
                 
             }
-            NodoAuxiliar.siguiente=null;
+            NodoAuxiliar.siguiente=null; //borramos el último 
         }
     }
     
@@ -212,7 +212,7 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
     { 
         if(!this.esVacia())
         {
-            while(this.primero!=null && this.primero.informacion==buscado) //para borrar si se encuentra en los primeros lugares
+            while(this.primero!=null && this.primero.informacion==buscado) //para borrar si se encuentran en los primeros lugares
             {
                 this.primero=this.primero.siguiente;
             }
@@ -301,7 +301,7 @@ public class ListaEnlazada { //mediante esta clase implementaremos la lista enla
          return;
         }
         Nodo NodoAuxiliar=this.primero;
-        while(contador<posicion-1 && NodoAuxiliar!=null) //asi avanzamos hasta la posicion anterior a la deseada
+        while(contador<posicion-1 && NodoAuxiliar!=null) //asi avanzamos hasta la posicion anterior a la deseada con el nodo auxiliar
         {
             NodoAuxiliar=NodoAuxiliar.siguiente;
             contador++;
