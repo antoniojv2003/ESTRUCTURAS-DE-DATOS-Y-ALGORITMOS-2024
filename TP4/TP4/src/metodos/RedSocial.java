@@ -88,26 +88,130 @@ public class RedSocial { //implementación para el punto 4-LAS REDES SOCIALES SE
         return (this.primero==null); 
     }
     
-    //operacion ESTA
+    //operacion ESTA SIN RECURSION
+//    public boolean esta(Usuario u)
+//    {
+//        if(this.esVacia())
+//        {
+//            return false; 
+//        }
+//        else
+//        {
+//            Nodo NodoAux=this.primero; //nodo auxiliar para recorrer la red social (lista enlazada)
+//            while(NodoAux!=null)
+//            {
+//                if(NodoAux.usuario.equals(u)) //condicion para saber si estos usuarios son iguales
+//                    return true;
+//                NodoAux=NodoAux.siguiente; 
+//            }
+//            return false; 
+//        }
+//    }
+//    
+    
+    //operacion ESTA con recursion 
     public boolean esta(Usuario u)
     {
         if(this.esVacia())
         {
-            return false; 
+            return false;
         }
         else
         {
-            Nodo NodoAux=this.primero; //nodo auxiliar para recorrer la red social (lista enlazada)
-            while(NodoAux!=null)
+            if(this.primero.usuario.equals(u))
             {
-                if(NodoAux.usuario.equals(u)) //condicion para saber si estos usuarios son iguales
-                    return true;
-                NodoAux=NodoAux.siguiente; 
+                return true;
             }
-            return false; 
+            else
+            {
+                RedSocial Raux=RedSocial.redSocialVacia();
+                Raux.primero=this.primero; 
+                Raux.primero=Raux.primero.siguiente; //con lista auxiliar para no destruir la original
+                //la operacion de arriba podría ser reemplazado por un método borrarPrimero
+                return(Raux.esta(u));  
+            }
         }
     }
     
+    //operacion ECHAR: elimina al usuario de la red social
+    public void echar(Usuario u)
+    {
+        if(this.esVacia())
+        {
+            return; 
+        }
+        else
+        {
+            
+            if(this.primero.usuario.equals(u))
+            {
+                this.primero=this.primero.siguiente;
+            }
+            else
+            {
+                Nodo NodoAux=this.primero;
+                while(NodoAux!=null && NodoAux.siguiente!=null)
+                {
+                    if(NodoAux.siguiente.usuario.equals(u))
+                    {
+                        NodoAux.siguiente=NodoAux.siguiente.siguiente;
+                    }
+                    else
+                    {
+                        NodoAux=NodoAux.siguiente;
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    //operacion ULTIMOUSUARIO: retorna el ultimo usuario registrado
+    public Usuario ultimoUsuario()
+    {
+        if(this.esVacia())
+        {
+            return null; //retorna nullo si la red social esta vacia
+        }
+        else 
+        {
+            Nodo NodoAux=this.primero; 
+            while(NodoAux.siguiente!=null)
+            {
+                NodoAux=NodoAux.siguiente; 
+            }
+            return NodoAux.usuario;
+        }
+    }
+    
+    //operacion CANTIDAD: retorna la cantidad de usuarios registrados
+    
+    public int cantidad()
+    {
+        if(this.esVacia())
+            return 0;
+        else
+        {
+            RedSocial Raux=RedSocial.redSocialVacia();
+            Raux.primero=this.primero;
+            Raux.primero=Raux.primero.siguiente;
+            return (1+Raux.cantidad());  //en forma recursiva
+        }
+    }
+    
+    //operacion ESAMIGOCOMUN: retorna true o false dependiendo de 
+    //si dos listas tienen en común el usuario mandado como parámetro
+    public boolean esAmigoComun(RedSocial rsAComparar,Usuario u)
+    {
+        if((this.esVacia()) || (rsAComparar.esVacia())) //puede ser redundate
+        {
+            return false;
+        }
+        else
+        {
+            return (this.esta(u) && rsAComparar.esta(u) );
+        }
+    }
     
     
     
