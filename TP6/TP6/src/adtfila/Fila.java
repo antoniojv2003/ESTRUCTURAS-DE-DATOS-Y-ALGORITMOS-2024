@@ -104,10 +104,6 @@ public class Fila { //clase que tendrá las operaciones definidas para el ADT FI
             this.cantidadItems--; //decremento el contador de items pues estoy sacando uno
         }
     }
-
-    public Integer longitud() { //operación longitud para obtener la cantidad de items con los que cuenta la fila
-        return cantidadItems;
-    }
     
     public Integer frente() //operación frente: obtiene el elemento que está en el frente de la fila
     {
@@ -116,6 +112,15 @@ public class Fila { //clase que tendrá las operaciones definidas para el ADT FI
         else
             return this.frenteFila.obtenerItem();
     }
+    
+    /*NOTA: las operaciones como longitud (definida a continuación), pertenece(),
+    igualfilas(),concatenarfilas(), etc., en la teoría se muestran como aplicaciones,
+    así que las operaciones básicas definidas para el adt son:
+    filaVacia(), esFilaVacia(), enfila(), defila() y frente()
+    */
+    public Integer longitud() { //operación auxiliar longitud para obtener la cantidad de items con los que cuenta la fila
+        return cantidadItems;
+    } 
     
     
     
